@@ -1,0 +1,86 @@
+.planCategory{
+    margin:0 20px ;
+    // border: 1px solid green;
+    // flex-direction: row;
+}
+
+.plans{
+   
+    // justify-content: space-evenly;
+    // border: 1px solid yellow;
+   margin:0 2rem 1rem 2rem;
+    justify-content: center;
+    
+}
+
+.card{
+    width: 15rem;
+    height: 17rem;
+    // border: 2px solid #ffffff;
+    background-color: #242323;
+    color: white;
+}
+
+.outer-card{
+    width: 15.3rem;
+    height: 17.3rem;
+    background: linear-gradient(to bottom right, #e43f5d,#b3112e,#520513);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+}
+.card-text{
+    font-size: 20px;
+    margin-top: 2px;
+    padding-bottom: 2px;
+}
+
+
+
+.card-title{
+    font-size: 30px;
+}
+
+.plan-container{
+
+   
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    overflow-y: scroll;
+    padding-bottom: 60px;
+    
+}
+
+.main{
+
+    background-color: beige;
+    background-image: url('../../../../../assets/recharge-plan-bg.png');
+    height: 100%;
+    padding-top: 60px;
+    
+ 
+}
+
+.plan-heading{
+
+    color: #b90424;
+}
+
+.recharge-btn{
+
+    border: 1px solid rgb(252, 248, 248);
+    color: white;
+    font-size: 12px;
+}
+
+.recharge-btn:hover{
+
+    background-color: #ffffff;
+    border: none;
+    color: black;
+    width: 53%;
+    box-shadow: black 0px 0px 10px 4px;
+}

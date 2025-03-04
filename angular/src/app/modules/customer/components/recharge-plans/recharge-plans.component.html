@@ -1,0 +1,66 @@
+<div class="main">
+    
+    <div class="plan-container">
+
+        <div *ngFor="let plan of plansList[0].regularPlans">
+           <div class="planCategory" id="{{plan.id}}">
+                <br><br>
+                <h4 class="plan-heading">{{plan.category}}</h4>
+                <br><br>
+                    
+                <div style="display: flex;flex-direction: row;flex-wrap: wrap;">
+                    <div class="plans" *ngFor="let pack of plan.plans">
+                        <div class="outer-card">
+                            <div class="card">
+                                <div class="card-body">
+                                    <h5 class="card-title">₹ {{pack.price}}</h5>  <br>
+                                    <p class="card-text">
+                                        <b>Data: </b> 1.5GB / day <br>
+                                        <b>Validity: </b> 30 days <br>
+                                        <b>Calls: </b> Unlimited
+                                    </p>  <br>
+                                    <div style="display: flex; justify-content: center;">
+                                        <button class="btn recharge-btn" (click)='rechargeNow(pack.price,pack.validity)'>Recharge Now</button>
+                                    </div>
+                                   
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+            
+        </div>
+        <div class="planCategory" id="{{plansList[1].id}}">
+            <br><br>
+            <h4 class="plan-heading">{{plansList[1].category}}</h4>
+            <br><br>
+        
+            <div style="display: flex;flex-direction: row;flex-wrap: wrap;">
+                <div class="plans" *ngFor="let plan of plansList[1].plans">
+                    <div class="outer-card">
+                        <div class="card">
+                            <div class="card-body">
+                                <h5 class="card-title">₹ {{plan.price}}</h5>  <br>
+                                <p class="card-text">
+                                    <b>Talktime: </b> ₹ {{plan.talktime}} <br>
+                                    <b>Validity: </b> {{plan.validity}}
+                                </p>  <br>
+                                <div style="display: flex; justify-content: center;">
+                                    <button class="btn recharge-btn" (click)='rechargeNow(plan.price,plan.validity)'>Recharge Now</button>
+                                </div>                        
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+            
+        </div>
+    </div>
+    <router-outlet></router-outlet>
+
+    
+</div>
+

@@ -1,0 +1,41 @@
+<!-- <p class="home">home works!</p> -->
+<ngx-particles
+    id="tsparticles"
+    [options]="particlesOptions"
+    (particlesLoaded)="particlesLoaded($event)"
+    *ngIf="particlesVisible"
+  >
+</ngx-particles>
+  <main class="main">
+    <div class="container">
+        <div style="align-items: center;justify-content: center;">
+            <p class="title">FlexiPay</p>
+            <p class="sub-title">Mobile recharge on the Go!</p>
+            <a routerLink="/register">
+              <button class="get-started-btn">Get started
+                  <!-- <img 
+                  class="get-started-img" 
+                  src="../../../../assets/right-chevron-black.png"
+                  /> -->
+                  <img 
+                  class="get-started-img" 
+                  src="../../../../assets/icons8-right-chevron-50.png" 
+                  />
+              
+              </button>
+            </a>
+
+           
+        </div>
+        <div >
+            <img src="../../../../assets/home-background-img.png" class="background-img" />
+        </div>
+    </div>
+    </main>
+
+  <!-- <ngx-confetti id="confetti" [options]="confettiOptions" [fire]="fire" *ngIf="confettiVisible"></ngx-confetti>
+  <ngx-fireworks id="fireworks" [options]="fireworksOptions" *ngIf="fireworksVisible"></ngx-fireworks> -->
+  <!-- <div style="z-index: -1; top: 10px; left: 10px; width: 500px">
+    <button (click)="toggleParticlesClick()">Toggle Particles</button>
+    <button (click)="toggleConfettiClick()">Shoot Confetti</button>
+    <button (click)="toggleFireworksClick()">Toggle Fireworks</button> -->

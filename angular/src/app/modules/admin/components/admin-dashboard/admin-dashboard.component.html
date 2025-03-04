@@ -1,0 +1,61 @@
+<div class="main">
+  <div class="content-container">
+    <h1 class="table-heading">All Transactions<div class="heading-hr" ></div></h1>
+    <div class="table-container" style="min-height: 50%;">
+      <table class="styled-table">
+        <!-- Table headers -->
+        <thead>
+          <tr>
+            <th>User ID</th>
+            <th>Name</th>
+            <th>Plan</th>
+            <th>Date</th>
+            <th>Expiry</th>
+          </tr>
+        </thead>
+        <!-- Table body -->
+        <tbody *ngFor="let record of records" (click)="filterRecords(record.name)">
+          <tr>
+            <td>{{ record.userId }}</td>
+            <td class="clickable">{{ record.name }}</td>
+            <td>₹ {{ record.plan }}</td>
+            <td>{{ record.date }}</td>
+            <td>{{ record.validity }}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    
+    <!-- Filtered table -->
+    <div *ngIf="showFilteredTable">
+      <h2 class="table-heading" style="font-size: 1.5rem;">{{ filteredRecords[0].name }}'s Transaction History</h2>
+      <div class="table-container">
+        <table class="styled-table">
+          <!-- Table headers -->
+          <thead>
+            <tr>
+              <th>User ID</th>
+              <th>Name</th>
+              <th>Plan</th>
+              <th>Date</th>
+              <th>Expiry</th>
+            </tr>
+          </thead>
+          <!-- Table body -->
+          <tbody>
+            <tr *ngFor="let record of filteredRecords">
+              <td>{{ record.userId }}</td>
+              <td class="clickable">{{ record.name }}</td>
+              <td>₹ {{ record.plan }}</td>
+              <td>{{ record.date }}</td>
+              <td>{{ record.validity }}</td>
+            </tr>
+          </tbody>
+        </table>
+        <br><br>
+      </div>
+    </div>
+    <br><br>
+  </div>
+</div>
+

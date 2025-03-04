@@ -1,0 +1,78 @@
+
+  .main{
+    // border: 1px solid yellow;
+    height: 100%;
+    background-image: url('../../../../../assets/dashboard-background.png');
+    background-repeat:repeat;
+    
+  }
+
+  .container-bg{
+
+    // border: 1px solid yellow;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: radial-gradient( circle ,transparent 30%, #00000099 60%, black 100%);
+  }
+  .container {
+
+    width: 40%;
+    background-color: #fff;
+    padding: 35px 60px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgb(26, 25, 25);    
+  }
+  
+
+  .phval{
+    margin-top: 40px;
+  }
+
+  h4 {
+    text-align: center;
+    color: #b90424;
+  }
+  
+  form {
+    margin-bottom: 20px;
+  }
+  
+  label {
+    display: block;
+    margin-bottom: 5px;
+    color: #666;
+  }
+  
+  input[type="text"],
+  select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  button {
+    background-color: white;
+    color: #b90424;
+    border: 1px solid #b90424;
+    padding: 5px 20px;
+    border-radius: 5px;
+    margin-top: 20px;
+    cursor: pointer;
+  }
+
+  .button-container {
+    text-align: center;
+  }
+  
+  
+  button:hover {
+    background-color: #B90424;
+    color: white;
+  }
+  
+

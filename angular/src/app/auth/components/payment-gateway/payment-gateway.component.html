@@ -1,0 +1,98 @@
+<!-- payment-form.component.html -->
+<div class="main">
+  <div class="payment-form">
+    <div class="tabs">
+      <button class="tab" [class.active]="selectedTab === 'upi'" (click)="selectTab('upi')">UPI</button>
+      <button class="tab" [class.active]="selectedTab === 'card'" (click)="selectTab('card')">Card Payment</button>
+    </div>
+  
+    <div class="form-content">
+      <!-- UPI form -->
+      <div *ngIf="selectedTab === 'upi'">
+  
+        <br>
+        <h5>Scan below QR to make payment !</h5>
+  
+        <div class="qr-img">
+          <img src="../../../../../assets/qr.png">
+        </div>
+        <br>
+        <p>Please do not refresh this page !</p>
+        <!-- Add more fields as needed -->
+      </div>
+  
+      <!-- Card form -->
+      <div *ngIf="selectedTab === 'card'">
+  
+        <div class="row">
+          <div class="col-75">
+            <div class="container">
+              <form nz-form [formGroup]="paymentForm">
+  
+                <div class="row">
+  
+  
+                  <div class="col-50">
+                    <br>
+  
+                    <nz-form-item>
+                      <nz-form-control nzErrorTip="Enter 16 digit card number !">
+                        <label for="ccnum">Card Number</label>
+                        <nz-input-group>
+                          <input type="text" nz-input id="ccnum" name="cardnumber"
+                            placeholder="Enter 16-digit card number" formControlName="cardNumber">
+                        </nz-input-group>
+                      </nz-form-control>
+                    </nz-form-item>
+  
+                    <nz-form-item>
+                      <nz-form-control nzErrorTip="Enter correct card expiry month!">
+                        <label for="expmonth">Expiry Month</label>
+                        <nz-input-group>
+                          <input type="text" nz-input id="expmonth" name="expmonth" placeholder="Eg. 08"
+                            formControlName="expiryMonth">
+                        </nz-input-group>
+                      </nz-form-control>
+                    </nz-form-item>
+  
+                    <div class="row">
+                      <div class="col-50">
+                        <nz-form-item>
+                          <nz-form-control nzErrorTip="Enter correct card expiry year!">
+                            <label for="expyear">Expiry Year</label>
+                            <nz-input-group>
+                              <input type="text" nz-input id="expyear" name="expyear" placeholder="Eg. 2018"
+                                formControlName="expiryYear">
+                            </nz-input-group>
+                          </nz-form-control>
+                        </nz-form-item>
+                      </div>
+  
+                      <div class="col-50">
+                        <nz-form-item>
+                          <nz-form-control nzErrorTip="Enter correct cvv!">
+                            <label for="cvv">CVV</label>
+                            <nz-input-group>
+                              <input type="text" nz-input id="cvv" name="cvv" placeholder="***" formControlName="cvv">
+                            </nz-input-group>
+                          </nz-form-control>
+                        </nz-form-item>
+                      </div>
+                    </div>
+                  </div>
+  
+                </div>
+  
+                <button class="btn" (click)="makePayment()">Pay ₹{{planAmount}}</button>
+  
+  
+              </form>
+            </div>
+          </div>
+  
+  
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

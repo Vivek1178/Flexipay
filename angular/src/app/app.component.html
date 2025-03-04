@@ -1,0 +1,45 @@
+<div *ngIf="!isAdminLoggedIn && !isCustomerLoggedIn">
+  <nz-header class="main-header" nz-row nzType="flex" class="custom-navbar">
+    <div class="navbar-title">
+      <img src="../assets/flexipay_logo.png" class="logo" />
+      <a routerLink="/home" class="brand-text">FlexiPay</a>
+    </div>
+
+    <div class="nav-links">
+      <a nz-button nzType="link" routerLink="/register" routerLinkActive="active">Sign Up</a>
+      <a nz-button nzType="link" routerLink="/login" routerLinkActive="active">Login</a>
+      <a nz-button nzType="link" routerLink="/home" routerLinkActive="active">Contact</a>
+    </div>
+
+  </nz-header>
+</div>
+
+<div *ngIf="isAdminLoggedIn">
+  <nz-header class="main-header" nz-row nzType="flex" class="custom-navbar">
+    <div class="navbar-title">
+      <a routerLink="/login">Welcome, Admin</a>
+    </div>
+
+    <div class="nav-links">
+      <a nz-button nzType="link" routerLink="/admin/dashboard" routerLinkActive="active"><img src="../assets/dashboard.png" style="height: 1.3rem;margin-right: 0.3rem;margin-bottom: 0.3rem;"/>Dashboard</a>
+      <a nz-button nzType="link" (click)="logout()" routerLinkActive="active"><img src="../assets/logout.png" style="height: 1.3rem;margin-right: 0.3rem;margin-bottom: 0.3rem;"/>Logout</a>
+    </div>
+
+  </nz-header>
+</div>
+
+<div *ngIf="isCustomerLoggedIn">
+  <nz-header class="main-header" nz-row nzType="flex" class="custom-navbar">
+    <div class="navbar-title">
+      <h5>Welcome, User</h5>
+    </div>
+
+    <div class="nav-links">
+      <a nz-button nzType="link" routerLink="/customer/dashboard" routerLinkActive="active"><img src="../assets/dashboard.png" style="height: 1.3rem;margin-right: 0.3rem;margin-bottom: 0.3rem;"/>Dashboard</a>
+      <a nz-button nzType="link" (click)="logout()" routerLinkActive="active"><img src="../assets/logout.png" style="height: 1.3rem;margin-right: 0.3rem;margin-bottom: 0.3rem;"/>Logout</a>
+    </div>
+
+  </nz-header>
+</div>
+
+<router-outlet></router-outlet>

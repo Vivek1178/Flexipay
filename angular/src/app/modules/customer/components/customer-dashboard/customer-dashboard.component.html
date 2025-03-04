@@ -1,0 +1,22 @@
+
+<div class="main">
+  <div class="container-bg">
+      <div class="container">
+        <h4>Verify Your Mobile Number</h4>
+        <form id="rechargeForm"> 
+      
+          <div class="phval">
+            <label for="phoneNumber">Enter your phone number:</label>
+            <input type="text" id="phoneNumber" name="phoneNumber" required pattern="[0-9]{10}" required placeholder="0000-000-000">
+          </div>
+          <div class="button-container">
+            <button type="button" (click)="validatePhone()">Validate</button>
+          </div>
+      
+        </form>
+      
+      </div>
+  </div>
+  
+</div>
+
